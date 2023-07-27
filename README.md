@@ -1,4 +1,4 @@
-# tyk-hashing
+# Tyk Hashing
 
 A Simple Go App to simulate Tyk Hashing Algorithm
 
