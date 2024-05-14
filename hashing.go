@@ -37,7 +37,7 @@ func main() {
 func HashString() {
 	for {
 
-		fmt.Println("Input what you want to hash or * to exit")
+		fmt.Println("Input your Tyk Key ID or whatever String you want to hash, or * to exit:")
 
 		input, err := reader.ReadString('\n')
 
@@ -49,8 +49,8 @@ func HashString() {
 				break
 			}
 
-			fmt.Println("Calculating the Hash")
-			fmt.Printf("That Hash of %s is %s\n", input, HashStr2(input))
+			fmt.Printf("Calculating the Hash for %s\n", input)
+			fmt.Printf("The Tyk Hash is %s\n", HashStr2(input))
 			reset()
 		}
 	}
