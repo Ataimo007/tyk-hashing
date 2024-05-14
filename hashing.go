@@ -108,7 +108,6 @@ func TokenHashAlgo(token string) string {
 	return ""
 }
 
-// TODO: add checks
 func TokenID(token string) (id string, err error) {
 	jsonToken, err := base64.StdEncoding.DecodeString(token)
 	if err != nil {
@@ -147,7 +146,7 @@ func hashFunction(algorithm string) (hash.Hash, error) {
 	case "", HashMurmur32:
 		return murmur3.New32(), nil
 	default:
-		return murmur3.New32(), fmt.Errorf("Unknown key hash function: %s. Falling back to murmur32.", algorithm)
+		return murmur3.New32(), fmt.Errorf("unknown key hash function: %s. falling back to murmur32", algorithm)
 	}
 }
 
